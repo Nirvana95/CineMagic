@@ -1,7 +1,7 @@
 import { Outlet } from "react-router";
-import Header from "../Pages/Header";
-import Main from "../Pages/Main";
-import Footer from "../Pages/Footer";
+import Header from "./Hero";
+import Main from "./Main";
+import Footer from "./Footer";
 
 import { useQuery } from "@tanstack/react-query";
 import { RingLoader } from "react-spinners";
@@ -20,7 +20,7 @@ function AppLayout() {
 
   if (isPending) return <RingLoader />;
   return (
-    <div className="bg-[url(../public/hero-bg.png)] h-screen w-full bg-cover  flex flex-col items-center ">
+    <div className="pattern ">
       <Header />
       <Main>
         <Outlet />
