@@ -2,9 +2,9 @@ function Popular() {
   return (
     <div className="all-movies">
       <ul>
-        {Array.from({ length: 6 }).map((_, index) => (
+        {Array.from({ length: 12 }).map((_, index) => (
           <li key={index} className="movie-card">
-            <img src="/no-movie.png" alt={`Movie ${index + 1}`} />
+            <img src="/No-Poster.png" alt={`Movie ${index + 1}`} />
             <div className="content">
               <h3>Title Movie</h3>
             </div>
