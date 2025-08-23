@@ -14,11 +14,13 @@ const router = createBrowserRouter([
         path: "/",
         Component: App,
         ErrorBoundary: ErrorPage,
-      },
-      {
-        path: "/:movieId",
-        Component: Movie,
-        ErrorBoundary: ErrorPage,
+        children: [
+          {
+            path: "movie/:movieId",
+            Component: Movie,
+            ErrorBoundary: ErrorPage,
+          },
+        ],
       },
     ],
   },
