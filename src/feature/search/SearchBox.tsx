@@ -2,7 +2,7 @@ function SearchBox() {
   return (
     <form className="search">
       <div>
-        <img src="../public/search.svg" />
+        <img src="/search.svg" />
         <input type="text" />
       </div>
     </form>

@@ -1,3 +1,5 @@
+import Pagination from "../../ui/Pagination";
+
 function Popular() {
   return (
     <div className="all-movies">
@@ -19,6 +21,8 @@ function Popular() {
           </li>
         ))}
       </ul>
+
+      <Pagination />
     </div>
   );
 }
