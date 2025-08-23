@@ -1,5 +1,4 @@
 import { Outlet } from "react-router";
-import Header from "./Hero";
 import Main from "./Main";
 import Footer from "./Footer";
 
@@ -21,7 +20,6 @@ function AppLayout() {
   // if (isPending) return <RingLoader />;
   return (
     <div className="pattern ">
-      <Header />
       <Main>
         <Outlet />
       </Main>
