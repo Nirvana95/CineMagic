@@ -19,12 +19,12 @@ function AppLayout() {
 
   // if (isPending) return <RingLoader />;
   return (
-    <div className="pattern ">
+    <>
       <Main>
         <Outlet />
       </Main>
-      <Footer />
-    </div>
+      {/* <Footer /> */}
+    </>
   );
 }
 
