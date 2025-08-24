@@ -9,3 +9,8 @@ export async function getTrends() {
   const response = await axiosInstance.get("trending/all/week");
   return response.data;
 }
+
+export async function getPopular() {
+  const response = await axiosInstance.get("/movie/popular");
+  return response.data;
+}
