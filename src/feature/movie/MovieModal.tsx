@@ -17,7 +17,7 @@ function MovieModal() {
   });
 
   return (
-    <div className="movie-card bg-[rgba(15,13,35,0.98)] p-12.5 mb-4 min-h-[80vh] flex flex-col justify-center">
+    <div className="movie-card bg-[rgba(15,13,35,0.98)] p-12.5 mb-4 min-h-[80vh] flex flex-col justify-center ">
       {isLoading && <DotLoader color="#fff" className="mx-auto" />}
       {isError && (
         <div className="text-white mx-auto">Something went wrong!</div>
