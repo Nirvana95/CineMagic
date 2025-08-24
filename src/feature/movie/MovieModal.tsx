@@ -7,7 +7,7 @@ function MovieModal() {
   // const { id } = useParams();
 
   return (
-    <div className="movie-card p-12.5 mb-4">
+    <div className="movie-card bg-[rgba(15,13,35,0.98)] p-12.5 mb-4">
       <div className="flex justify-between items-center">
         <h2>Movie Title</h2>
         <div className="flex gap-3">

@@ -5,22 +5,36 @@ import Movie from "./Pages/Movie.tsx";
 import App from "./Pages/App.tsx";
 import ErrorPage from "./Pages/ErrorPage.tsx";
 
+// const router = createBrowserRouter([
+//   {
+//     Component: AppLayout,
+//     ErrorBoundary: ErrorPage,
+//     children: [
+//       {
+//         path: "/",
+//         Component: App,
+//         ErrorBoundary: ErrorPage,
+//         children: [
+//           {
+//             path: "movie/:movieId",
+//             Component: Movie,
+//             ErrorBoundary: ErrorPage,
+//           },
+//         ],
+//       },
+//     ],
+//   },
+// ]);
 const router = createBrowserRouter([
   {
-    Component: AppLayout,
+    path: "/",
+    Component: App,
     ErrorBoundary: ErrorPage,
     children: [
       {
-        path: "/",
-        Component: App,
+        path: "movie/:movieId",
+        Component: Movie,
         ErrorBoundary: ErrorPage,
-        children: [
-          {
-            path: "movie/:movieId",
-            Component: Movie,
-            ErrorBoundary: ErrorPage,
-          },
-        ],
       },
     ],
   },

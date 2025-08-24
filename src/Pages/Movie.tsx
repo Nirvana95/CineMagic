@@ -1,7 +1,7 @@
-import MovieModal from "../feature/movie/MovieModal";
+import Modal from "../ui/Modal";
 
 function Movie() {
-  return <MovieModal />;
+  return <Modal />;
 }
 
 export default Movie;
