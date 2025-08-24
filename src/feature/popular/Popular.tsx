@@ -1,15 +1,15 @@
 import { useQuery } from "@tanstack/react-query";
 import Pagination from "../../ui/Pagination";
 import { getPopular } from "../../services/tmdb-queries";
+import { Link } from "react-router";
 
 const IMAGE_BASE_URL = "https://media.themoviedb.org/t/p/w220_and_h330_face";
 
-function Popular() {
+function Popular({ handleClick }: { handleClick: () => void }) {
   const { isLoading, data: popular } = useQuery({
     queryKey: ["popular"],
     queryFn: getPopular,
   });
-  console.log(popular?.results[0]);
 
   if (isLoading) return <div>loading</div>;
   return (
@@ -21,13 +21,17 @@ function Popular() {
             key={movie.id}
             className="movie-card hover:scale-105 transition-transform duration-300"
           >
-            <img
-              className="cursor-pointer"
-              src={IMAGE_BASE_URL + movie.poster_path}
-              alt={movie.title}
-            />
+            <Link to={`/movie/${movie.id}`} onClick={handleClick}>
+              <img
+                className="cursor-pointer"
+                src={IMAGE_BASE_URL + movie.poster_path}
+                alt={movie.title}
+              />
+            </Link>
             <div className="content ">
-              <h3 className="cursor-pointer">{movie.title}</h3>
+              <Link to={`/movie/${movie.id}`} onClick={handleClick}>
+                <h3 className="cursor-pointer">{movie.title}</h3>
+              </Link>
             </div>
             <div className="content">
               <div className="rating">

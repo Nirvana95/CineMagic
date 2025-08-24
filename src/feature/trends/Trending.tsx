@@ -5,7 +5,7 @@ import { Link } from "react-router";
 
 const IMAGE_BASE_URL = "https://media.themoviedb.org/t/p/w220_and_h330_face";
 
-function Trending() {
+function Trending({ handleClick }: { handleClick: () => void }) {
   const { isLoading, data: trends } = useQuery({
     queryKey: ["trending"],
     queryFn: getTrends,
@@ -21,7 +21,10 @@ function Trending() {
         {Array.from({ length: 5 }).map((_, i) => (
           <li key={i}>
             <p>{i + 1}</p>
-            <Link to={`/movie/${trends.results.at(i).id}`}>
+            <Link
+              to={`/movie/${trends.results.at(i).id}`}
+              onClick={handleClick}
+            >
               <img
                 className="cursor-pointer hover:scale-115 transition-transform duration-500"
                 src={
