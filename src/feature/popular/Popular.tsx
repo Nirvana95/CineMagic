@@ -25,7 +25,7 @@ function Popular({ handleClick }: { handleClick: () => void }) {
             <Link to={`/movie/${movie.id}`} onClick={handleClick}>
               <img
                 className="cursor-pointer"
-                src={IMAGE_BASE_URL + movie.poster_path}
+                src={IMAGE_BASE_URL + movie.backdrop_path}
                 alt={movie.title}
               />
             </Link>

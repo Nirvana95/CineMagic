@@ -6,23 +6,41 @@ function DetailedList({ children }: { children: React.ReactNode }) {
   );
 }
 
-function Title({ children }: { children: React.ReactNode }) {
-  return <dt className="text-lg text-[#a8b5db]">{children}</dt>;
-}
+// function Title({ children }: { children: React.ReactNode }) {
+//   return <dt className="text-lg text-[#a8b5db]">{children}</dt>;
+// }
 
-function Description({
+// function Description({
+//   color,
+//   children,
+// }: {
+//   color?: string;
+//   children: React.ReactNode;
+// }) {
+//   return (
+//     <dd className={`flex gap-2.25 ${color || "text-[#d6c7ff]"}`}>{children}</dd>
+//   );
+// }
+
+function Row({
+  title,
   color,
   children,
 }: {
+  title: string;
   color?: string;
   children: React.ReactNode;
 }) {
   return (
-    <dd className={`flex gap-2.25 ${color || "text-[#d6c7ff]"}`}>{children}</dd>
+    <>
+      <dt className="text-lg text-[#a8b5db]">{title}</dt>
+      <dd className={`flex gap-2.25 ${color || "text-[#d6c7ff]"}`}>
+        {children}
+      </dd>
+    </>
   );
 }
 
-DetailedList.Title = Title;
-DetailedList.Description = Description;
+DetailedList.Row = Row;
 
 export default DetailedList;

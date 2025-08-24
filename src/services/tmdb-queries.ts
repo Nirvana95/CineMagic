@@ -14,3 +14,8 @@ export async function getPopular() {
   const response = await axiosInstance.get("/movie/popular");
   return response.data;
 }
+
+export async function getMovie(movie_id: number) {
+  const response = await axiosInstance.get(`/movie/${movie_id}`);
+  return response.data;
+}

@@ -16,7 +16,7 @@ function Modal() {
   }
   return createPortal(
     <div
-      className={`absolute right-1/2 translate-x-1/2 w-full z-50 p-20 bg-[rgba(225,225,225,0.1)] backdrop-blur-xs`}
+      className={`absolute right-1/2 translate-x-1/2 w-full z-50 p-20 bg-[rgba(225,225,225,0.1)] backdrop-blur-xs min-h-screen`}
       onClick={(e) => handleExit(e)}
     >
       <MovieModal />
