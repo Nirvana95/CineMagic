@@ -3,7 +3,8 @@ import Pagination from "../../ui/Pagination";
 import { getPopular } from "../../services/tmdb-queries";
 import { Link } from "react-router";
 
-const IMAGE_BASE_URL = "https://media.themoviedb.org/t/p/w220_and_h330_face";
+// const IMAGE_BASE_URL = "https://media.themoviedb.org/t/p/w220_and_h330_face";
+const IMAGE_BASE_URL = "https://media.themoviedb.org/t/p/w533_and_h300_bestv2";
 
 function Popular({ handleClick }: { handleClick: () => void }) {
   const { isLoading, data: popular } = useQuery({
